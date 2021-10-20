@@ -1,2 +1,4 @@
 extra-manifests
 microservices-demo
+kubernetes-controllers/Vagrantfile
+kubernetes-controllers/kind-config.yaml
