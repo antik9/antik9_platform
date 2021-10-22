@@ -8,13 +8,21 @@ spec:
   containers:
   - name: "web"
     image: "antik9/k8s-otus-web:0.1"
+    readinessProbe:
+      httpGet:
+        path: /index.html
+        port: 80
+    livenessProbe:
+      tcpSocket:
+        port: 8000
+      periodSeconds: 10
     volumeMounts:
     - name: app
       mountPath: /app
   initContainers:
   - name: "init"
     image: "busybox:1.31.0"
-    command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
+    command: ["sh", "-c", "wget -O- https://tinyurl.com/otus-k8s-intro | sh"]
     volumeMounts:
     - name: app
       mountPath: /app
