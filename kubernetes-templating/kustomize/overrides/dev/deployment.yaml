@@ -1,0 +1,14 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendationservice
+  namespace: hipster-shop
+spec:
+  selector:
+    matchLabels:
+      app: recommendationservice-dev
+  template:
+    metadata:
+      labels:
+        app: recommendationservice-dev

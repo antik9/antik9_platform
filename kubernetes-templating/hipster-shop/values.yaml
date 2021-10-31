@@ -1,0 +1,12 @@
+redis:
+  name: redis
+  fullnameOverride: redis
+  sentinel:
+    enabled: false
+  auth:
+    enabled: false
+  replica:
+    replicaCount: 1
+  tls:
+    enabled: false
+  port: 6379
