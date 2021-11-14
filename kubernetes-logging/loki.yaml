@@ -1,0 +1,17 @@
+loki:
+  tolerations:
+  - key: node-role
+    operator: Equal
+    value: infra
+    effect: NoSchedule
+  nodeSelector:
+    yandex.cloud/node-group-id: cat9v3rd76sbfti7i5i7
+
+promtail:
+  tolerations:
+  - key: node-role
+    operator: Equal
+    value: infra
+    effect: NoSchedule
+  nodeSelector:
+    yandex.cloud/node-group-id: cat9v3rd76sbfti7i5i7
