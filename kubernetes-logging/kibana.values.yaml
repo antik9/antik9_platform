@@ -1,0 +1,24 @@
+tolerations:
+- key: node-role
+  operator: Equal
+  value: infra
+  effect: NoSchedule
+nodeSelector:
+  yandex.cloud/node-group-id: cat9v3rd76sbfti7i5i7
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+  - host: kibana.51.250.9.1.nip.io
+    paths:
+    - path: /
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "500m"
+    memory: "1Gi"

@@ -1,0 +1,19 @@
+tolerations:
+- key: node-role
+  operator: Equal
+  value: infra
+  effect: NoSchedule
+nodeSelector:
+  yandex.cloud/node-group-id: cat9v3rd76sbfti7i5i7
+volumeClaimTemplate:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 1Gi
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "500m"
+    memory: "1Gi"
