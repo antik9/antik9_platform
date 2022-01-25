@@ -8,6 +8,7 @@ kubernetes-vault/consul-helm
 kubernetes-vault/vault-helm
 kubernetes-vault/vault-guides
 kubernetes-storage/csi-driver-host-path
+kubernetes-production/kubespray
 
 gibo 2.2.3 by Simon Whitaker <sw@netcetera.org>
 https://github.com/simonwhitaker/gibo
